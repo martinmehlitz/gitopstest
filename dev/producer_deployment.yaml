@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: producer
-          image: agalliaoregistry.azurecr.io/producer_test:v1
+          image: agalliaoregistry.azurecr.io/producer_test:v2
           ports:
             - containerPort: 8080
           imagePullPolicy: Always
