@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: producertest
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: producertest
+  template:
+    metadata:
+      labels:
+        app: producertest
+    spec:
+      containers:
+        - name: producer
+          image: agalliaoregistry.azurecr.io/producer_test:v1
+          ports:
+            - containerPort: 8080
+          imagePullPolicy: Always
